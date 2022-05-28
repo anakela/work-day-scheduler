@@ -9,16 +9,27 @@ $("#currentDay").text(new Date().toLocaleDateString());
 
 $(".hour").each(function () {
     console.log($(this).text());
+    console.log($("#currentDay").val);
+
+    const today = new Date();
+    const todaysHours = today.getHours();
+    const todaysMinutes = today.getMinutes();
+
+    console.log(todaysHours);
+    console.log(todaysMinutes);
+
+    parseInt($(".hour"));
+
     // Compare this to local time.
-    if ($(this).text === ) {
-        // Change class to .present. 
-        // $(this).removeClass(".hour");
-        $(".description").addClass(".present");
-    } else if ($(this).text === ) {
-        // Change class to .past.
-        $(".description").addClass(".past");
-    } else {
-        // Change class to .future.
-        $(".description").addClass(".future");
-    }
+    // if ($(this).text === todaysHours) {
+    //     // Change class to .present. 
+    //     // $(this).removeClass(".hour");
+    //     $(".description").addClass(".present");
+    // } else if ($(this).text === ) {
+    //     // Change class to .past.
+    //     $(".description").addClass(".past");
+    // } else {
+    //     // Change class to .future.
+    //     $(".description").addClass(".future");
+    // }
 });
