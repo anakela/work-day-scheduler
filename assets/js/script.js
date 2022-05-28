@@ -10,6 +10,15 @@ $("#currentDay").text(new Date().toLocaleDateString());
 $(".hour").each(function () {
     console.log($(this).text());
     // Compare this to local time.
-    if ()
-    // Then change colors.
+    if ($(this).text === ) {
+        // Change class to .present. 
+        // $(this).removeClass(".hour");
+        $(".description").addClass(".present");
+    } else if ($(this).text === ) {
+        // Change class to .past.
+        $(".description").addClass(".past");
+    } else {
+        // Change class to .future.
+        $(".description").addClass(".future");
+    }
 });

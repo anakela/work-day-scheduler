@@ -104,6 +104,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful Resources
 
 - [jQuery: .text()](https://api.jquery.com/text/)
+- [jQuery: Category: Selectors](https://api.jquery.com/category/selectors/)
+- [](https://api.jquery.com/each/)
 
 ## Author
 
