@@ -1,5 +1,13 @@
 // Fill the "currentDay" p tag with the local time zone's date.
-$("#currentDay").text(new Date().toLocaleDateString());
+const date = new Date();
+const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+};
+
+$("#currentDay").text(new Date().toLocaleDateString("us-EN", options));
 
 // Set a for loop to review each textarea with class "description" and change colors accordingly.
 $(".description").each(function () {
@@ -21,7 +29,7 @@ $(".description").each(function () {
 
 // When the save button is clicked, store the data in localstorage.
 $(".saveBtn").on("click", function (storeEvent) {
-    console.log(storeEvent);
+    
     let keyName = $(this).siblings(".description").attr("id");
     let textValue = $(this).siblings(".description").val();
     localStorage.setItem(keyName, textValue);
@@ -31,11 +39,11 @@ $(".saveBtn").on("click", function (storeEvent) {
     // if ($(".description").text !== '') {
     //     $(".description").text(localStorage.content);
     // }
-    if (keyName === $("#hour" + i)) {
-        localStorage.getItem(keyName, textValue);
-        $(".description").appendChild();
-    }
-
+    // if (keyName === $("#hour" + i)) {
+    //     localStorage.getItem(keyName, textValue);
+    //     $(".description").appendChild();
+    // }
+    console.log(storeEvent);
 });
 
 
