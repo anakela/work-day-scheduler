@@ -30,9 +30,26 @@ $(".description").each(function () {
 // When the save button is clicked, store the data in localstorage.
 $(".saveBtn").on("click", function (storeEvent) {
     
-    let keyName = $(this).siblings(".description").attr("id");
-    let textValue = $(this).siblings(".description").val();
-    localStorage.setItem(keyName, textValue);
+    let key = $(this).siblings(".description").attr("id");
+    let value = $(this).siblings(".description").val();
+    localStorage.setItem(key, value);
+
+    $(".description").each(function (displayEvent) {
+        localStorage.getItem(value);
+        $(".description").appendChild(value);
+
+        console.log(displayEvent);
+    });
+
+    // let descVal = localStorage.getItem($(".description").val);
+
+    // for (let i = 0; i < $(".description").val; i++) {
+    //     document.getElementById($("#hour" + i)) = $(".description").val;
+        
+    // }
+    // document.getElementById
+
+    // localStorage.getItem(value) = $(".description").text();
 
     // localStorage.content = $(".description").text();
 
