@@ -1,13 +1,8 @@
-// Fill the "currentDay" p tag with the local time zone's date.
-const date = new Date();
-const options = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-};
+// Fill the "currentDay" p tag with the local time zone's date with a running clock.
+setInterval(function () {
+    $("#currentDay").text(moment().format('MMMM Do, YYYY, h:mm a'));
+}, 1000);
 
-$("#currentDay").text(new Date().toLocaleDateString("us-EN", options));
 
 // Set a for loop to review each textarea with class "description" and change colors accordingly.
 $(".description").each(function () {
@@ -27,40 +22,49 @@ $(".description").each(function () {
     }
 });
 
+// Display scheduled events on page load.
+displayEvent();
+
 // When the save button is clicked, store the data in localstorage.
-$(".saveBtn").on("click", function (storeEvent) {
-    
-    let key = $(this).siblings(".description").attr("id");
-    let value = $(this).siblings(".description").val();
-    localStorage.setItem(key, value);
+$(".saveBtn").on("click", function () {
 
-    $(".description").each(function (displayEvent) {
-        localStorage.getItem(value);
-        $(".description").appendChild(value);
+    // Set the key and value for input.
+    let keyName = $(this).siblings(".description").attr("id");
+    console.log(keyName);
+    let valueName = $(this).siblings(".description").val();
 
-        console.log(displayEvent);
-    });
-
-    // let descVal = localStorage.getItem($(".description").val);
-
-    // for (let i = 0; i < $(".description").val; i++) {
-    //     document.getElementById($("#hour" + i)) = $(".description").val;
-        
-    // }
-    // document.getElementById
-
-    // localStorage.getItem(value) = $(".description").text();
-
-    // localStorage.content = $(".description").text();
-
-    // if ($(".description").text !== '') {
-    //     $(".description").text(localStorage.content);
-    // }
-    // if (keyName === $("#hour" + i)) {
-    //     localStorage.getItem(keyName, textValue);
-    //     $(".description").appendChild();
-    // }
-    console.log(storeEvent);
+    // Call the storeEvent function with fresh user input.
+    storeEvent(keyName, valueName);
 });
 
+// Store events in local storage.
+function storeEvent(keyName, valueName) {
+    let eventDesc = JSON.parse(localStorage.getItem("eventDesc"));
 
+    if (eventDesc === null) {
+        eventDesc = {};
+    }
+
+    eventDesc[keyName] = valueName;
+    localStorage.setItem("eventDesc", JSON.stringify(eventDesc));
+    displayEvent();
+};
+
+// Display events on the work day scheduler.
+function displayEvent() {
+    let eventDesc = JSON.parse(localStorage.getItem("eventDesc"));
+
+    if (eventDesc === null) {
+        return;
+    }
+
+    let textArea = $(".description");
+
+    for (let i = 0; i < textArea.length; i++) {
+        let hour = $(textArea[i]).attr("id");
+
+        if (eventDesc[hour]) {
+            $(textArea[i]).val(eventDesc[hour]);
+        };
+    };
+};

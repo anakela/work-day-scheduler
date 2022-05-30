@@ -103,19 +103,26 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful Resources
 
+- [Stack Overflow: Live Clock Moment.js](https://stackoverflow.com/questions/66648322/live-clock-moment-js)
+- [Stack Overflow: Use Font Awesome Icon As Favicon](https://stackoverflow.com/questions/18156240/use-font-awesome-icon-as-favicon)
+- [MDN Web Docs: Storage.getItem()](https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem)
+- [Font Awesome Icon Downloader](https://gauger.io/fonticon/)
 - [jQuery: .text()](https://api.jquery.com/text/)
 - [jQuery: Category: Selectors](https://api.jquery.com/category/selectors/)
-- [](https://api.jquery.com/each/)
+- [jQuery: .each()](https://api.jquery.com/each/)
+- [Font Awesome](https://fontawesome.com/)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- LinkedIn - [@anakela](https://www.linkedin.com/in/anakela/)
+- GitHub - [@anakela](https://github.com/anakela)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Fellow Bootcampers:
+  - Nifer 
+  - Ivy Chang
+  - Nolan Spence
+  - Michael Barrett
+  - Kevin Muehlbauer
+- Bobbi Tarkany (Tutor)
