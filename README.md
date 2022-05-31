@@ -16,90 +16,74 @@
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The Challenge
 
-> As you proceed in your journey to becoming a full-stack web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges.
+> Create a simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-> To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach you all the skills you need to succeed in this assignment.
+> The starter code uses the Moment.js (Links to an external site.) library to work with date and time, but feel free to use a different JavaScript solution to handle this functionality since [Moment.js](https://courses.bootcampspot.com/courses/1693/assignments/26729?module_item_id=537732#:~:text=Create%20a%20simple,project%20status%20page.) is considered a "legacy" project. Learn more about some alternative solutions in the [Moment.js project status page](https://courses.bootcampspot.com/courses/1693/assignments/26729?module_item_id=537732#:~:text=Create%20a%20simple,project%20status%20page.).
 
-> #### NOTE  
-> Coding assessments are an important part of the interview process for developers. In fact, employers often use them to filter out job candidates with a cut-off score. To help you prepare, we’ve developed a set of technical interview questions that you can answer throughout the course. The difficulty level of these questions will increase as you become a more proficient developer. If you take advantage of these opportunities to practice, you should be well-prepared to shine during the technical interview process toward the end of this course!
+> #### IMPORTANT
+> Make sure to clone the starter code repository and make your own repository with the starter code. Do not fork the starter code repository!
+
+> Before you start, clone the [starter code](https://github.com/coding-boot-camp/super-disco).
 
 ### User Story
 
-> AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+```
+AS AN employee with a busy schedule
+I WANT to add important events to a daily planner
+SO THAT I can manage my time effectively
+```
 
 ### Acceptance Criteria
 
-> GIVEN I am taking a code quiz  
-> WHEN I click the start button  
-> THEN a timer starts and I am presented with a question  
-> WHEN I answer a question  
-> THEN I am presented with another question  
-> WHEN I answer a question incorrectly  
-> THEN time is subtracted from the clock  
-> WHEN all questions are answered or the timer reaches 0  
-> THEN the game is over  
-> WHEN the game is over  
-> THEN I can save my initials and score  
+```
+GIVEN I am using a daily planner to create a schedule
+WHEN I open the planner
+THEN the current day is displayed at the top of the calendar
+WHEN I scroll down
+THEN I am presented with time blocks for standard business hours
+WHEN I view the time blocks for that day
+THEN each time block is color-coded to indicate whether it is in the past, present, or future
+WHEN I click into a time block
+THEN I can enter an event
+WHEN I click the save button for that time block
+THEN the text for that event is saved in local storage
+WHEN I refresh the page
+THEN the saved events persist
+``` 
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./assets/images/work-day-scheduler.png)
+![](./assets/images/work-day-scheduler-2.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/anakela/work-day-scheduler](https://github.com/anakela/work-day-scheduler)
+- Live Site URL: [https://anakela.github.io/work-day-scheduler/](https://anakela.github.io/work-day-scheduler/)
 
 ## My Process
 
 ### Built With
 
-- Semantic HTML5 markup
+- Semantic HTML5 Markup
 - CSS
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JavaScript
+- jQuery
+- Moment.js
+- Bootstrap
+- Font Awesome
 
 ### What I Learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-If you want more help with writing markdown, check out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued Development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful Resources
 
@@ -120,9 +104,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Acknowledgments
 
 - Fellow Bootcampers:
-  - Nifer 
+  - Nifer Kilakila
   - Ivy Chang
   - Nolan Spence
   - Michael Barrett
   - Kevin Muehlbauer
 - Bobbi Tarkany (Tutor)
+- AskBCS Slack Channel
