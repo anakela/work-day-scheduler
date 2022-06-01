@@ -79,11 +79,62 @@ THEN the saved events persist
 
 ### What I Learned
 
+During this assignment, I learned how to loop through the various `description` textareas in order to save content in them using the `saveBtn` button.
+
+```
+// When the save button is clicked, store the data in localstorage.
+$(".saveBtn").on("click", function () {
+
+    // Set the key and value for input.
+    let keyName = $(this).siblings(".description").attr("id");
+    console.log(keyName);
+    let valueName = $(this).siblings(".description").val();
+
+    // Call the storeEvent function with fresh user input.
+    storeEvent(keyName, valueName);
+});
+```
+
+I also get more experience storing items to `localStorage`, then pulling them from `localStorage` for display.
+
+```
+// Store events in local storage.
+function storeEvent(keyName, valueName) {
+    let eventDesc = JSON.parse(localStorage.getItem("eventDesc"));
+
+    if (eventDesc === null) {
+        eventDesc = {};
+    }
+
+    eventDesc[keyName] = valueName;
+    localStorage.setItem("eventDesc", JSON.stringify(eventDesc));
+    displayEvent();
+};
+
+// Display events on the work day scheduler.
+function displayEvent() {
+    let eventDesc = JSON.parse(localStorage.getItem("eventDesc"));
+
+    if (eventDesc === null) {
+        return;
+    }
+
+    let textArea = $(".description");
+
+    for (let i = 0; i < textArea.length; i++) {
+        let hour = $(textArea[i]).attr("id");
+
+        if (eventDesc[hour]) {
+            $(textArea[i]).val(eventDesc[hour]);
+        };
+    };
+};
+```
 
 
 ### Continued Development
 
-
+I struggled in this particular exercise with pulling data that was stored in `localStorage` and displaying them on the page.  I'd like to do more of this in the future to solidify my understanding of this and similar processes.
 
 ### Useful Resources
 
